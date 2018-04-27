@@ -73,7 +73,7 @@ console.log('test')
 
 studentLogin(){
  var vm =  this
-
+    
 vm.$store.dispatch('studentLogin', vm.model)
 },
 

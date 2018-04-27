@@ -35,7 +35,7 @@ const actions = {
 studentLogin({commit}, model){
 
 
-
+var vm = this
    axios.post('api/student_signin', model).then(function(response){
 
      let token = response.data.token
@@ -43,6 +43,7 @@ studentLogin({commit}, model){
      if(token){
 
        localStorage.setItem('token', token);
+      
 
        commit(types.LOGIN);
         router.push('/')
